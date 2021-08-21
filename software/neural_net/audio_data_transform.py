@@ -1,3 +1,4 @@
+#audio preparation
 from pydub import AudioSegment
 
 t1 = t1 * 1000 #Works in milliseconds

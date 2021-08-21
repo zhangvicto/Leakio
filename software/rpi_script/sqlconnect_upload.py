@@ -22,9 +22,9 @@ def insertBLOB(id, audioFile):
         userId = convertToBinaryData(id)
         file = convertToBinaryData(audioFile)
 
-        sql_double = (userId, file)
+        insert_blob_double = (userId, file)
 
-        result = cursor.execute(sql_insert_blob_query, sql_double)
+        result = cursor.execute(sql_insert_blob_query, insert_blob_double)
         connection.commit()
         
         print("File inserted successfully as a BLOB into audio table", result)
