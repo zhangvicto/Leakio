@@ -34,7 +34,7 @@ def insertBLOB(audioFile):
             connection.close()
             print("MySQL connection is closed")
 
-insertBLOB("D:\Python\Articles\my_SQL\images\eric_photo.png")
+insertBLOB("../../src/example_audio.wav")
 
 # result = subprocess.run(
 #     ['php', 'image.php'],    # program and arguments
