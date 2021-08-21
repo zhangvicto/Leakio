@@ -1,0 +1,13 @@
+[Unit]
+After=network.service
+Description=Leakio
+
+[Service]
+Type=simple
+# WorkingDirectory=/Leakio/rpi_script/
+ExecStart=/code/scripts/leakio.sh
+# User=do-user
+
+[Install]
+WantedBy=multi-user.target
+# WantedBy=default.target

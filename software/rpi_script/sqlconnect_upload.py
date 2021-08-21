@@ -11,18 +11,18 @@ def insertBLOB(id, audioFile):
     print("Inserting BLOB into audio table")
     try:
         connection = mysql.connector.connect(host='34.130.199.48',
-                                             database='test_company',
+                                             database='test_2',
                                              user='root',
                                              password='victor')
 
         cursor = connection.cursor()
-        sql_insert_blob_query = "INSERT INTO audio (user_id, AudioFile) VALUES (%s, %s)"
+        sql_insert_blob_query = "INSERT INTO `audio` (userid, file) VALUES (%s, %s)"
 
         #convert to binary
-        userId = convertToBinaryData(id)
+        #userId = convertToBinaryData(id)
         file = convertToBinaryData(audioFile)
 
-        insert_blob_double = (userId, file)
+        insert_blob_double = (id, file)
 
         result = cursor.execute(sql_insert_blob_query, insert_blob_double)
         connection.commit()
@@ -34,11 +34,11 @@ def insertBLOB(id, audioFile):
 
     finally:
         if connection.is_connected():
+
+            #close connection to sql
             cursor.close()
             connection.close()
             print("MySQL connection is closed")
-
-insertBLOB(1, "../../rpi_script/sample.wav")
 
 # result = subprocess.run(
 #     ['php', 'image.php'],    # program and arguments

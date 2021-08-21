@@ -1,7 +1,9 @@
 import pyaudio
+import os
 import wave
+from sqlconnect_upload import insertBLOB
 
-filename = "sample.wav"
+filename = "capture.wav"
 
 chunk = 1024
 
@@ -18,7 +20,9 @@ stream = p.open(format=FORMAT,
                 output=True,
                 frames_per_buffer=chunk)
 frames = []
+
 print("Recording...")
+
 for i in range(int(44100 / chunk * record_seconds)):
     data = stream.read(chunk)
     frames.append(data)
@@ -40,3 +44,9 @@ wf.setframerate(sample_rate)
 wf.writeframes(b"".join(frames))
 
 wf.close()
+
+# upload to database
+insertBLOB(1, filename)
+
+# remove file created once uploaded to database
+os.remove(filename)

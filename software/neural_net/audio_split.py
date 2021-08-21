@@ -32,5 +32,5 @@ class SplitWavAudioMubin():
 folder = '../../src/dataset'
 file = 'drip_data.wav'
 split_wav = SplitWavAudioMubin(folder, file)
-split_wav.multiple_split(sec_per_split=10)
+split_wav.multiple_split(sec_per_split=10) #10 second splits
 
