@@ -1,5 +1,5 @@
 //Sensor Pin
-const int sensorPin = A1;
+const int sensorPin = 35;
 
 //Smoothing vars
 const int numReadings = 2;
