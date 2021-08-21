@@ -16,7 +16,7 @@ def insertBLOB(audioFile):
                                              password='victor')
 
         cursor = connection.cursor()
-        sql_insert_blob_query = "INSERT INTO audio (AudioFile) VALUES (%s)"
+        sql_insert_blob_query = "INSERT INTO audio (user_id, AudioFile) VALUES (%s,%s)"
 
         file = convertToBinaryData(audioFile)
         result = cursor.execute(sql_insert_blob_query, file)
