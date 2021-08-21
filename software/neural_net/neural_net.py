@@ -5,7 +5,6 @@ import torchaudio
 import IPython.display as ipd
 import matplotlib.pyplot as plt
 
-
 learning_rate = 2e-4
 optimizer = optim.Adam(resnet_model.parameters(), lr=learning_rate)
 epochs = 50

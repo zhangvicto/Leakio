@@ -18,7 +18,7 @@ def insertBLOB(id, audioFile):
         cursor = connection.cursor()
         sql_insert_blob_query = "INSERT INTO audio (user_id, AudioFile) VALUES (%s, %s)"
 
-        
+        #convert to binary
         userId = convertToBinaryData(id)
         file = convertToBinaryData(audioFile)
 
@@ -38,7 +38,7 @@ def insertBLOB(id, audioFile):
             connection.close()
             print("MySQL connection is closed")
 
-insertBLOB(1, "../../src/example_audio.wav")
+insertBLOB(1, "../../rpi_script/sample.wav")
 
 # result = subprocess.run(
 #     ['php', 'image.php'],    # program and arguments
