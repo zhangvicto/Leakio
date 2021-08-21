@@ -7,7 +7,7 @@ def convertToBinaryData(filename):
         binaryData = file.read()
     return binaryData
 
-def insertBLOB(audioFile):
+def insertBLOB(id, audioFile):
     print("Inserting BLOB into audio table")
     try:
         connection = mysql.connector.connect(host='34.130.199.48',
@@ -16,10 +16,15 @@ def insertBLOB(audioFile):
                                              password='victor')
 
         cursor = connection.cursor()
-        sql_insert_blob_query = "INSERT INTO audio (user_id, AudioFile) VALUES (%s,%s)"
+        sql_insert_blob_query = "INSERT INTO audio (user_id, AudioFile) VALUES (%s, %s)"
 
+        
+        userId = convertToBinaryData(id)
         file = convertToBinaryData(audioFile)
-        result = cursor.execute(sql_insert_blob_query, file)
+
+        sql_double = (userId, file)
+        
+        result = cursor.execute(sql_insert_blob_query, sql_double)
         connection.commit()
         
         print("File inserted successfully as a BLOB into audio table", result)
