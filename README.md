@@ -1,2 +1,2 @@
-# PlumbApp
-Pipe leak detection sensor for your home. 
+# LEAKIO
+Smart pipe leak detection sensor for your home.
