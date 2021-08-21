@@ -1,5 +1,5 @@
 import mysql.connector
-import subprocess
+#import subprocess
 
 def convertToBinaryData(filename):
     # Convert digital data to binary format
@@ -7,27 +7,23 @@ def convertToBinaryData(filename):
         binaryData = file.read()
     return binaryData
 
-
-def insertBLOB(emp_id, name, photo, biodataFile):
+def insertBLOB(audioFile):
     print("Inserting BLOB into audio table")
     try:
-        connection = mysql.connector.connect(host='localhost',
+        connection = mysql.connector.connect(host='34.130.199.48',
                                              database='test_company',
                                              user='root',
                                              password='victor')
 
         cursor = connection.cursor()
         sql_insert_blob_query = """ INSERT INTO audio
-                          (id, name, photo, biodata) VALUES (%s,%s,%s,%s)"""
+                          (audio) VALUES (%s)"""
 
-        empPicture = convertToBinaryData(photo)
-        file = convertToBinaryData(biodataFile)
-
-        # Convert data into tuple format
-        insert_blob_tuple = (emp_id, name, empPicture, file)
-        result = cursor.execute(sql_insert_blob_query, insert_blob_tuple)
+        file = convertToBinaryData(audioFile)
+        result = cursor.execute(sql_insert_blob_query, file)
         connection.commit()
-        print("Image and file inserted successfully as a BLOB into audio table", result)
+        
+        print("File inserted successfully as a BLOB into audio table", result)
 
     except mysql.connector.Error as error:
         print("Failed inserting BLOB data into MySQL table {}".format(error))
@@ -38,10 +34,7 @@ def insertBLOB(emp_id, name, photo, biodataFile):
             connection.close()
             print("MySQL connection is closed")
 
-insertBLOB(1, "Eric", "D:\Python\Articles\my_SQL\images\eric_photo.png",
-           "D:\Python\Articles\my_SQL\images\eric_bioData.txt")
-insertBLOB(2, "Scott", "D:\Python\Articles\my_SQL\images\scott_photo.png",
-           "D:\Python\Articles\my_SQL\images\scott_bioData.txt")
+insertBLOB("D:\Python\Articles\my_SQL\images\eric_photo.png")
 
 # result = subprocess.run(
 #     ['php', 'image.php'],    # program and arguments
@@ -49,4 +42,3 @@ insertBLOB(2, "Scott", "D:\Python\Articles\my_SQL\images\scott_photo.png",
 #     check=True               # raise exception if program fails
 # )
 # print(result.stdout)         # result.stdout contains a byte-string
-
