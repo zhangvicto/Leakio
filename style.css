@@ -129,7 +129,7 @@ body {
 
 .icon {
     position: absolute;
-    width: 25px;
+    width: 20px;
     cursor: pointer;
     top: 50%;
     left: 50%;
@@ -143,10 +143,12 @@ body {
 }
 
 .active {
-    width:75px;
-    height: 75px;
+    width:70px;
+    height: 70px;
     background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
     border-radius: 50px;
+    transform: translateY(-20px);
+    box-shadow: 0px 10px 22px rgba(149, 173, 254, 0.3);
 }
 
 .menu-bar li {
