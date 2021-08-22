@@ -43,10 +43,10 @@
         ): PDO {
             try {
                 # [START cloud_sql_mysql_pdo_create_tcp]
-                $username = 'root';
-                $password = 'victor';
-                $dbName = 'leakdb';
-                $dbHost = "192.168.2.57";
+                //$username = 'root';
+                //$password = 'victor';
+                //$dbName = 'leakdb';
+                //$dbHost = "192.168.2.57";
     
                 // Connect using TCP
                 $dsn = sprintf('mysql:dbname=%s;host=%s', $dbName, $dbHost);
@@ -82,6 +82,7 @@
             }
     
             return $conn;
+
         }
     
         /**
@@ -149,4 +150,4 @@
             return $conn;
         }
     }
-
+?>
