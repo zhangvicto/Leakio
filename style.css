@@ -1,6 +1,7 @@
 html {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -11,18 +12,51 @@ body {
 }
 
 .container {
-    border-radius: 10px;
     position: absolute;
-    height: 90vh;
-    width: 640px;
+    border-radius: 30px;
+    height: 700px;
+    width: 350px;
     background-color: white;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+}
+
+.bubble-wrap {
+    position: relative;
+    height:100%;
+    width:100%;
+}
+
+.text-bubble {
+    position: absolute;
+    height: 200px;
+    width:200px;
+    border-radius: 100%;
+    background-color: green;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
-.text-bubble {
+.text-wrap {
+    position: relative;
+    position: relative;
+    height:100%;
+    width:100%;
+}
+
+.text {
+    position: absolute;
+    font-size: 40px;
+    font-weight: 700;
+    color:white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.menu-bar {
+    bottom: 0;
     
-    border-radius: 100%;
-    background-color: green;
 }
