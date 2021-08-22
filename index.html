@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -13,18 +13,68 @@
 
 <body>
     <div class="container">
+        <div class="title-text">
+            Welcome back, <br>
+            <span class="name-text">Hackthe6ix</span>
+        </div>
+
         <div class="bubble-wrap">
             <div class="text-bubble">
-                <div class="text-wrap"><div class="text">NORMAL</div></div>
+                <div class="text-wrap">
+                    <div class="text">
+                        Status:<span id="replace"> No detected leaks</span> <br>
+                        <span style="font-size: 12px;font-weight: 400;">Sound & Water sensors have not detected any
+                            abnormal activity in past 24 hours.
+                        </span>
+                        <div class="button">
+                            <span
+                                style="font-size:12px;position:absolute; left:50%;top: 50%;transform: translate(-50%,-50%);width:100%;text-align: center;">
+                                View Devices
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <div class="next">
+            <span style="font-size: 12px;">Next Steps: Update Security</span>
+            <div class="button2"><span
+                    style="font-size:12px;position:absolute; left:50%;top: 50%;transform: translate(-50%,-50%);width:100%;text-align: center;">
+                    Update
+                </span></div>
+        </div>
+
+        <div class="graph">
+            <span style="font-weight: 700;">Acoustic Status:</span>
+            <span style="color:green;">Good</span>
+            <img class="graph-img" id="graph" src="./img/graph_img.png">
+        </div>
+
         <div class="menu-bar">
-            <li>Stuff</li>
+            <li>
+                <div class="icon-container"><img class="icon" src="./img/search.png"></div>
+            </li>
+            <li>
+                <div class="icon-container"><img class="icon" src="./img/stats.png"></div>
+            </li>
+            <li>
+                <div class="icon-container"><img class="icon" src="./img/home.png"></div>
+            </li>
+            <li>
+                <div class="icon-container"><img class="icon" src="./img/cam.png"></div>
+            </li>
+            <li>
+                <div class="icon-container"><img class="icon" src="./img/person.png"></div>
+            </li>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners')
+    </script>
+
 </body>
 
 </html>

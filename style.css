@@ -22,21 +22,36 @@ body {
     transform: translate(-50%,-50%);
 }
 
+.title-text {
+    margin:35px;
+    margin-top:60px;
+    margin-bottom: 20px;
+    color: #ADA4A5;
+}
+
+.name-text {
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+}
+
 .bubble-wrap {
     position: relative;
-    height:100%;
     width:100%;
 }
 
 .text-bubble {
-    position: absolute;
-    height: 200px;
-    width:200px;
-    border-radius: 100%;
-    background-color: green;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    height: 180px;
+    width:280px;
+    background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 10px 40px 0px #1D16171A;
+    --smooth-corners: 13;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    border-radius: 22px;
 }
 
 .text-wrap {
@@ -47,16 +62,98 @@ body {
 }
 
 .text {
+    text-align: left;
     position: absolute;
-    font-size: 40px;
+    font-size: 15px;
     font-weight: 700;
     color:white;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 20px;
+}
+
+.button {
+    position: relative;
+    width:130px; 
+    height:45px;
+    background-color: white;
+    color:#C58BF2;
+    border-radius: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.next {
+    margin:35px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.button2 {
+    position: relative;
+    width:70px; 
+    height:30px;
+    background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
+    color:white;
+    border-radius: 30px;
+    cursor: pointer;
+    display:inline-block;
+    margin-left: 10px;
+}
+
+.graph {
+    margin:35px;
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+
+.graph-img {
+    width: 280px;
+}
+
+.menu-bar {
+    position: absolute;
+    width:100%;
+    bottom: 0;
+    height:70px;
+    -webkit-box-shadow: 0px 2px 21px 11px rgba(0,0,0,0.19); 
+    box-shadow: 0px 2px 21px 11px rgba(0,0,0,0.10);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    position: absolute;
+    width: 25px;
+    cursor: pointer;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
-.menu-bar {
+.icon-container {
+    position: relative;
+    width:70px;
+    height:70px;
+}
+
+.active {
+    width:75px;
+    height: 75px;
+    background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
+    border-radius: 50px;
+}
+
+.menu-bar li {
+    list-style: none;
+}
+
+.footer {
+    position: fixed;
     bottom: 0;
-    
 }
