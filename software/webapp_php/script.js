@@ -5,12 +5,9 @@ window.setTimeout(function () {
     window.location.reload();
   }, 10000);
 
-// var state = document.getElementById("hidden").textContent;
-// console.log(state);
-// var stateResult = parseInt(state);
-// console.log(stateResult);
-
-let stateResult = 1;
+var state = document.getElementById("hidden").textContent;
+var stateResult = parseInt(state);
+console.log(stateResult);
 
 if (stateResult > 0) {
     document.getElementById("replace").innerHTML = " Leak Detected!"
