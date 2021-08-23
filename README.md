@@ -37,8 +37,11 @@ This includes our app design in Figma, which was crafted using knowledge on prop
 
 ![Figma](/img/figma.gif)
 
-Back End:
-PHP, MySQL, Python
+### Back End:
+PHP: website to retrieve data from Cloud SQL
+MySQL: access database through Raspberry Pi
+Python: using mysql connector to upload data to Cloud SQL
+Cloud SQL: Google MySQL database
 
 ## Hardware
 ### Electrical
@@ -55,14 +58,13 @@ PHP, MySQL, Python
 ![render](/img/leakio_render.jpg)
 
 ## Challenges we ran into
-Front-End:
+### Front-End:
 There were many challenges we ran into, especially regarding some technical aspects of Figma. Although the most challenging aspect in this would’ve been the implementation of the design.
-Figma Demo: 
 
-Back-End:
+### Back-End:
 This is where most challenges were faced, which includes the making of the acoustic leak detector, proper sound recognition, cloud development, and data transfer.
 
-It was the first time any of us had used MySQL, and we created it on the Google Cloud SQL platform. We also had to use both Python and PHP to retrieve and send data, two languages we are not super familiar with. 
+It was our first time using MySQL, and learning how to use Google Cloud SQL. We also had to use both Python and PHP to retrieve and send data, two languages we are not super familiar with. 
 
 We also had no idea how to set up a neural network with PyTorch. Also finding the proper data that can be used to train has proven to be very difficult. 
 
