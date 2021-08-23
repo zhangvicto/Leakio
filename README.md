@@ -1,4 +1,4 @@
-![LOGO](/img/logo.png)
+![LOGO](/img/logo_text.png)
  
 ## Inspiration
 
@@ -31,26 +31,28 @@ It is far more economical to prevent a leak, rather than fix it when it already 
 
 In addition to saved funds, our planned system will be able to send information to insurance companies for specific data purposes such as which houses or areas have the most leaks, or individual risk assessment. This would allow insurance companies to more appropriately create better rates for the consumer, for the benefit of both consumer and insurance company.
 
-### Software
-Front End:
+## Software
+### Front End:
 This includes our app design in Figma, which was crafted using knowledge on proper design and ratios. Specifically, we wanted to create an app design that looked simple but had all the complex features that would seem professional. This is something we are proud of, as we feel this component was successful.
+
+![Figma](/img/figma.gif)
 
 Back End:
 PHP, MySQL, Python
 
-### Hardware
-Electrical
+## Hardware
+### Electrical
 - A custom PCB is designed from scratch using EAGLE
 - Consists of USBC charging port, lithium battery charging circuit, ESP32, Water sensor connector, microphone connector
 - The water sensor and microphone are extended from the PCB which is why they need a connector
 
-Custom Water Sensor
-![LOGO](/img/demo.gif)
+### Custom Water Sensor
+![DEMO](/img/demo.gif)
 
-3D-model
+### 3D-model
 - Hub contains all the electronics and the sensors
 - Easy to install design and places the microphone within the walls close to the pipes
-![LOGO](/img/leakio_render.jpg)
+![render](/img/leakio_render.jpg)
 
 ## Challenges we ran into
 Front-End:
