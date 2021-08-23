@@ -1,7 +1,6 @@
 ![LOGO](/img/logo_text.png)
  
 ## Inspiration
-
 Over one-fourth of Canadians during their lifetimes will have to deal with water damage in their homes. This is an issue that causes many Canadians overwhelming stress from the sheer economical and residential implications. 
 
 As an effort to assist and solve these very core issues, we have designed a solution that will allow for future leaks to be avoidable. Our prototype system made, composed of software and hardware will ensure house leaks are a thing of the past!
@@ -24,7 +23,6 @@ Our hardware components will have the ability to send data to a local network, t
 - Future planned app/website with the ability to receive such information
 
 ## Business Aspect of Leakio
-
 Standalone, this solution is profitable through the aspect of selling the specific hardware to consumers. Although for insurance companies, this is a vital solution that has the potential to save millions of dollars.
 
 It is far more economical to prevent a leak, rather than fix it when it already happens. The time of paying the average cost of $10,900 US dollars to fix water damage or a freezing claim is now avoidable!
@@ -50,6 +48,7 @@ Cloud SQL: Google MySQL database
 - The water sensor and microphone are extended from the PCB which is why they need a connector
 
 ### Custom Water Sensor
+Two wires and an analog input.
 ![DEMO](/img/demo.gif)
 
 ### 3D-model
@@ -76,19 +75,19 @@ We also had no idea how to set up a neural network with PyTorch. Also finding th
 Google Cloud: 
 Creating a MySQL database and setting up a Deep Learning VM.
 
-MySQL:
+### MySQL:
 Using MySQL and syntaxes, learning PHP.
 
-Machine Learning:
+### Machine Learning:
 How to set up Pytorch.
 
-PCB Design:
+### PCB Design:
 Learning how to use EAGLE to design PCBs.
 
-Raspberry Pi:
+### Raspberry Pi:
 Autorun Python scripts and splitting .wav files.
 
-Others:
+### Others:
 Not to leave the recording to the last hour. It is hard to cut to 3 minutes with an explanation and demo. 
 
 ## What's next for Leakio
