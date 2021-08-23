@@ -1,4 +1,4 @@
-![LOGO](/img/logo_text.png)
+![LOGO](/img/logo_text.PNG)
  
 ## Inspiration
 Over one-fourth of Canadians during their lifetimes will have to deal with water damage in their homes. This is an issue that causes many Canadians overwhelming stress from the sheer economical and residential implications. 
@@ -36,10 +36,10 @@ This includes our app design in Figma, which was crafted using knowledge on prop
 ![Figma](/img/figma.gif)
 
 ### Back End:
-PHP: website to retrieve data from Cloud SQL
-MySQL: access database through Raspberry Pi
-Python: using mysql connector to upload data to Cloud SQL
-Cloud SQL: Google MySQL database
+- PHP: website to retrieve data from Cloud SQL
+- MySQL: access database through Raspberry Pi
+- Python: using mysql connector to upload data to Cloud SQL
+- Cloud SQL: Google MySQL database
 
 ## Hardware
 ### Electrical
